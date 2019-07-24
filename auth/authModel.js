@@ -12,7 +12,13 @@ const add = async user => {
   return get(id);
 };
 
+const findBy = username =>
+  db('users')
+    .where({ username })
+    .first();
+
 module.exports = {
   add,
   get,
+  findBy,
 };
