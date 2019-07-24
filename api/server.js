@@ -1,6 +1,7 @@
 const express = require('express');
 
 const server = express();
+const authRouter = require('../auth/route');
 
 server.use(express.json());
 
@@ -10,5 +11,7 @@ server.get('/', (req, res) =>
     message: 'Welcome, thou faithful developer!',
   }),
 );
+
+server.use('/api', authRouter);
 
 module.exports = server;
