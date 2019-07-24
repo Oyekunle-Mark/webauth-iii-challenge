@@ -1,5 +1,6 @@
 const Model = require('./authModel');
 const bcryptHelper = require('../helpers/bcryptHelper');
+const jwtHelper = require('../helpers/jwtHelper');
 
 const register = async (req, res) => {
   const newUser = req.body;
@@ -41,8 +42,11 @@ const login = async (req, res) => {
         message: 'Password not correct.',
       });
 
+    const token = jwtHelper.generateToken(user.id);
+
     res.status(200).json({
       status: 200,
+      token,
       message: `Welcome, ${user.username}`,
     });
   } catch (err) {
