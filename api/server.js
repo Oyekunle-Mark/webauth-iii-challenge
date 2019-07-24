@@ -2,6 +2,7 @@ const express = require('express');
 
 const server = express();
 const authRouter = require('../auth/route');
+const userRouter = require('../user/route');
 
 server.use(express.json());
 
@@ -12,6 +13,7 @@ server.get('/', (req, res) =>
   }),
 );
 
-server.use('/api', authRouter);
+server.use('/api/auth', authRouter);
+server.use('/api', userRouter);
 
 module.exports = server;
