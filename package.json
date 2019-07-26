@@ -1,0 +1,39 @@
+{
+  "name": "webauth-iii-challenge",
+  "version": "1.0.0",
+  "description": "an authentication workflow",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Oyekunle-Mark/webauth-iii-challenge.git"
+  },
+  "keywords": [
+    "token",
+    "json",
+    "web",
+    "auth"
+  ],
+  "author": "oyekunle-mark",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Oyekunle-Mark/webauth-iii-challenge/issues"
+  },
+  "homepage": "https://github.com/Oyekunle-Mark/webauth-iii-challenge#readme",
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.2.0",
+    "eslint-plugin-import": "^2.18.2",
+    "nodemon": "^1.19.1"
+  },
+  "dependencies": {
+    "bcrypt": "^3.0.6",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "knex": "^0.19.1",
+    "sqlite3": "^4.0.9"
+  }
+}
